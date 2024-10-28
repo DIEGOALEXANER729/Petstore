@@ -1,0 +1,34 @@
+Conclusiones
+
+
+* Añadir una mascota a la tienda:
+
+    Ambos escenarios de agregar una mascota se ejecutaron con éxito, lo que indica que la API está funcionando como se espera en cuanto a la creación de mascotas.
+    En ambos casos, se devolvieron los ID de mascota y el estado, lo que muestra que la respuesta de la API es consistente y se puede confiar en la información que devuelve.
+    Las validaciones para asegurar que el ID sea un número y el estado una cadena de texto se realizaron correctamente en ambos escenarios, lo que refuerza la integridad de los datos devueltos.
+    La diferencia en los tiempos de respuesta entre ambos escenarios sugiere que la segunda prueba fue significativamente más rápida. Esto podría ser un indicador de que la carga en el sistema era menor o que el estado de la base de datos permitía una respuesta más ágil.
+
+• Consultar la mascota ingresada previamente (Búsqueda por ID)
+
+    La prueba demuestra que la API puede recuperar correctamente los detalles de una mascota por ID, lo que indica que la funcionalidad de búsqueda está funcionando correctamente.
+    Las validaciones que aseguran que el ID y el estado de la mascota coincidan con los datos creados son efectivas, lo que garantiza la integridad y consistencia de los datos en la API.
+    Aunque la duración total de la prueba fue de 1,786 ms, es importante comparar este tiempo con otros escenarios para determinar si se trata de un rendimiento adecuado. Considerando que el tiempo de creación de la mascota fue menor, esto sugiere que el tiempo de búsqueda es razonable, pero puede ser objeto de análisis para optimización en futuras pruebas.
+    Este escenario muestra que el flujo completo desde la creación hasta la recuperación de la mascota se maneja correctamente, lo que es crucial para la funcionalidad general del sistema.
+
+
+• Actualizar el nombre de la mascota y el estatus de la mascota a “sold”
+
+    El escenario confirma que la API puede actualizar correctamente los detalles de una mascota, incluyendo el nombre y el estado, lo que sugiere que esta funcionalidad está implementada correctamente.
+    Las validaciones realizadas son efectivas, ya que aseguran que la respuesta contenga los nuevos valores esperados para el nombre y el estado de la mascota.
+    La duración de la prueba fue de 1,741 ms. Comparado con otros escenarios, esto parece ser un tiempo razonable, aunque siempre es útil hacer un seguimiento del rendimiento a lo largo del tiempo para detectar posibles degradaciones.
+
+
+• Consultar la mascota modificada por estatus (Búsqueda por estatus)
+
+    Todos los escenarios demuestran que la API puede buscar mascotas por estado de manera efectiva, lo que indica que la funcionalidad de búsqueda está correctamente implementada.
+    Las validaciones para asegurar que los estados devueltos coinciden con los parámetros proporcionados son efectivas, lo que asegura que la API devuelve resultados consistentes y correctos.
+    Las duraciones de los escenarios son razonables, aunque el primer escenario es notablemente más largo que los siguientes. Esto podría indicar que la base de datos o el servidor estaban más ocupados al realizar la primera búsqueda. Sería útil monitorear y optimizar esta parte si se considera necesario.
+    Los escenarios muestran que se puede buscar con diferentes estados (disponible y vendido), lo que permite a los usuarios filtrar mascotas de acuerdo a su disponibilidad. Esto es un aspecto importante para cualquier API relacionada con un comercio.
+
+
+
